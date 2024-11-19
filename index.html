@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div>
+        <h1>Create Cat</h1>
+        <input id="in_createCat_name" type="text">
+        <input id="in_createCat_species" type="text">
+        <input id="in_createCat_age" type="number">
+        <select id="in_createCat_isVegan" name="isVegan">
+            <option value="true">true</option>
+            <option value="false">false</option>
+        </select>
+        <p id="out_createCat"></p>
+        <button onclick="createCat()">Create</button>
+    </div>
+    
+    <div>
+        <h1>Read All Cats</h1>
+        <ul id="out_getCats"></ul>
+    </div>
+
+    <div>
+        <h1>Read Specific Cat</h1>
+        <input id="in_getCatDetails_id" type="number">
+        <p id="out_getCatDetails"></p>
+        <button onclick="getCatDetails()">Get</button>
+    </div>
+
+    <div>
+        <h1>Update Cat</h1>
+        <input id="in_updateCat_id" type="number">
+        <input id="in_updateCat_name" type="text">
+        <input id="in_updateCat_species" type="text">
+        <input id="in_updateCat_age" type="number">
+        <select id="in_updateCat_isVegan" name="isVegan">
+            <option value="true">true</option>
+            <option value="false">false</option>
+        </select>
+        <p id="out_updateCat"></p>
+        <button onclick="updateCat()">Update</button>
+    </div>
+
+    <div>
+        <h1>Delete Cat</h1>
+        <input id="in_deleteCat_id" type="number">
+        <p id="out_deleteCat"></p>
+        <button onclick="deleteCat()">Delete</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
