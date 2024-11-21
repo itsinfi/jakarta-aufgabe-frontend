@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:8080/jakarta-aufgabe-backend/rest'
+const API_URL = 'http://localhost:8080/jakarta-aufgabe-backend/rest';
 
 function catToString(cat) {
     return `${cat.id}: ${cat.name} (${cat.species}, ${cat.age} Jahre alt, ${cat.isVegan ? '' : 'nicht'} vegan)`;
@@ -6,11 +6,21 @@ function catToString(cat) {
 
 async function ajax({ method, path, onload, body, json }) {
     console.log(body);
-    const req = new XMLHttpRequest;
+
+    const req = new XMLHttpRequest();
+
     req.onload = onload;
-    if (body) body = JSON.stringify(body);
+
+    if (body) {
+        body = JSON.stringify(body);
+    }
+
     req.open(method, `${API_URL}${path}`, true);
-    if (json) req.setRequestHeader('Content-Type', 'application/json');
+
+    if (json) {
+        req.setRequestHeader('Content-Type', 'application/json');
+    }
+    
     if (body) {
         req.send(body);
     } else {
@@ -25,11 +35,11 @@ function getAllCats() {
         console.log(data);
         for (value in data) {
             const li = document.createElement('li');
-            const cat = data[value];
-            li.innerHTML = catToString(cat);
+            li.innerHTML = catToString(data[value]);
             ul.appendChild(li);
         }
     };
+
     ajax({
         method: 'GET',
         path: '/cats/',
@@ -43,6 +53,7 @@ function getCatDetails() {
         console.log(cat);
         document.getElementById('out_getCatDetails').innerHTML = catToString(cat);
     };
+
     ajax({
         method: 'GET',
         path: `/cats/details/?id=${document.getElementById('in_getCatDetails_id').value}`,
@@ -57,6 +68,7 @@ function createCat() {
         document.getElementById('out_deleteCat').innerHTML = data;
         location.reload();
     };
+
     ajax({
         method: 'POST',
         path: '/cats/',
@@ -78,6 +90,7 @@ function updateCat() {
         document.getElementById('out_deleteCat').innerHTML = data;
         location.reload();
     };
+
     ajax({
         method: 'PUT',
         path: `/cats/?id=${document.getElementById('in_updateCat_id').value}`,
@@ -99,6 +112,7 @@ function deleteCat() {
         document.getElementById('out_deleteCat').innerHTML = data;
         location.reload();
     };
+
     ajax({
         method: 'DELETE',
         path: `/cats/?id=${document.getElementById('in_deleteCat_id').value}`,

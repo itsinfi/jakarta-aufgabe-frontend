@@ -8,50 +8,73 @@
 </head>
 <body>
 
+    <h1>CRUD</h1>
+
+    <br>
+
+    <!-- Read All Cats -->
     <div>
-        <h1>Create Cat</h1>
-        <input id="in_createCat_name" type="text">
-        <input id="in_createCat_species" type="text">
-        <input id="in_createCat_age" type="number">
-        <select id="in_createCat_isVegan" name="isVegan">
-            <option value="true">true</option>
-            <option value="false">false</option>
-        </select>
-        <p id="out_createCat"></p>
-        <button onclick="createCat()">Create</button>
-    </div>
-    
-    <div>
-        <h1>Read All Cats</h1>
+        <h2>Read All Cats</h2>
         <ul id="out_getCats"></ul>
     </div>
 
+    <br>
+
+    <!-- Read Specific Cat -->
     <div>
-        <h1>Read Specific Cat</h1>
-        <input id="in_getCatDetails_id" type="number">
+        <h2>Read Specific Cat</h2>
+        <input id="in_getCatDetails_id" type="number" required>
         <p id="out_getCatDetails"></p>
         <button onclick="getCatDetails()">Get</button>
     </div>
 
+    <br>
+
+    <!-- Create Cat -->
     <div>
-        <h1>Update Cat</h1>
-        <input id="in_updateCat_id" type="number">
-        <input id="in_updateCat_name" type="text">
-        <input id="in_updateCat_species" type="text">
-        <input id="in_updateCat_age" type="number">
-        <select id="in_updateCat_isVegan" name="isVegan">
-            <option value="true">true</option>
-            <option value="false">false</option>
-        </select>
-        <p id="out_updateCat"></p>
-        <button onclick="updateCat()">Update</button>
+        <h2>Create Cat</h2>
+        <form onsubmit="createCat()">
+            <input id="in_createCat_name" type="text" required>
+            <input id="in_createCat_species" type="text" required>
+            <input id="in_createCat_age" type="number" required>
+            <select id="in_createCat_isVegan" name="isVegan">
+                <option value="true">true</option>
+                <option value="false">false</option>
+            </select>
+            <p id="out_createCat"></p>
+            <button type="submit">Create</button>
+        </form>
     </div>
 
+    <br>
+
+    <!-- Update Cat -->
     <div>
-        <h1>Delete Cat</h1>
-        <input id="in_deleteCat_id" type="number">
-        <p id="out_deleteCat"></p>
-        <button onclick="deleteCat()">Delete</button>
+        <h2>Update Cat</h2>
+        <form onsubmit="updateCat()">
+            <input id="in_updateCat_id" type="number" required>
+            <input id="in_updateCat_name" type="text" required>
+            <input id="in_updateCat_species" type="text" required>
+            <input id="in_updateCat_age" type="number" required>
+            <select id="in_updateCat_isVegan" name="isVegan">
+                <option value="true">true</option>
+                <option value="false">false</option>
+            </select>
+            <p id="out_updateCat"></p>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+    <br>
+
+    <!-- Delete Cat -->
+    <div>
+        <h2>Delete Cat</h2>
+        <form onsubmit="deleteCat()">
+            <input id="in_deleteCat_id" type="number" required>
+            <p id="out_deleteCat"></p>
+            <button type="submit">Delete</button>
+        </form>
     </div>
 
     <script src="script.js"></script>
