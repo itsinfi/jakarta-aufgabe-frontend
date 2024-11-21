@@ -1,7 +1,25 @@
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+
+import Cats from "./app/cats/index"
+
+/**
+ *  Hier ist der Router mit den definierten Routen
+ */
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Navigate to="/cats" replace={true}/>,
+  },
+  {
+    path: "cats",
+    element: <Cats />
+  },
+]);
+
 const App = () => {
   return (
     <>
-      <h1>Hier steht demnächst irgendwas. <i>Versprochen</i>  (._.  )</h1>
+      <RouterProvider router={router} />
     </>
   )
 }
