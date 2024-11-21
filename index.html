@@ -13,67 +13,78 @@
     <br>
 
     <!-- Read All Cats -->
-    <div>
+    <div class="container">
         <h2>Read All Cats</h2>
-        <ul id="out_getCats"></ul>
+        <ul id="out_getCats">
+            <li>asdasd</li>
+            <li>asdasd</li>
+        </ul>
     </div>
 
     <br>
 
     <!-- Read Specific Cat -->
-    <div>
+    <div class="container">
         <h2>Read Specific Cat</h2>
-        <input id="in_getCatDetails_id" type="number" required>
-        <p id="out_getCatDetails"></p>
-        <button onclick="getCatDetails()">Get</button>
+        <div class="row">
+            <input id="in_getCatDetails_id" type="number" required placeholder="id">
+            <p id="out_getCatDetails"></p>
+            <button onclick="getCatDetails()">Get</button>
+        </div>
     </div>
 
     <br>
 
     <!-- Create Cat -->
-    <div>
+    <div class="container">
         <h2>Create Cat</h2>
         <form onsubmit="createCat()">
-            <input id="in_createCat_name" type="text" required>
-            <input id="in_createCat_species" type="text" required>
-            <input id="in_createCat_age" type="number" required>
-            <select id="in_createCat_isVegan" name="isVegan">
-                <option value="true">true</option>
-                <option value="false">false</option>
-            </select>
-            <p id="out_createCat"></p>
-            <button type="submit">Create</button>
+            <div class="row">
+                <input id="in_createCat_name" type="text" required placeholder="name">
+                <input id="in_createCat_species" type="text" required placeholder="species">
+                <input id="in_createCat_age" type="number" required placeholder="age">
+                <select id="in_createCat_isVegan" name="isVegan">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+                <p id="out_createCat"></p>
+                <button type="submit">Create</button>
+            </div>
         </form>
     </div>
 
     <br>
 
     <!-- Update Cat -->
-    <div>
+    <div class="container">
         <h2>Update Cat</h2>
         <form onsubmit="updateCat()">
-            <input id="in_updateCat_id" type="number" required>
-            <input id="in_updateCat_name" type="text" required>
-            <input id="in_updateCat_species" type="text" required>
-            <input id="in_updateCat_age" type="number" required>
-            <select id="in_updateCat_isVegan" name="isVegan">
-                <option value="true">true</option>
-                <option value="false">false</option>
-            </select>
-            <p id="out_updateCat"></p>
-            <button type="submit">Update</button>
+            <div class="row">
+                <input id="in_updateCat_id" type="number" required placeholder="id">
+                <input id="in_updateCat_name" type="text" required placeholder="name">
+                <input id="in_updateCat_species" type="text" required placeholder="species">
+                <input id="in_updateCat_age" type="number" required placeholder="age">
+                <select id="in_updateCat_isVegan" name="isVegan">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select>
+                <p id="out_updateCat"></p>
+                <button type="submit">Update</button>
+            </div>
         </form>
     </div>
 
     <br>
 
     <!-- Delete Cat -->
-    <div>
+    <div class="container">
         <h2>Delete Cat</h2>
         <form onsubmit="deleteCat()">
-            <input id="in_deleteCat_id" type="number" required>
-            <p id="out_deleteCat"></p>
-            <button type="submit">Delete</button>
+            <div class="row">
+                <input id="in_deleteCat_id" type="number" required placeholder="id">
+                <p id="out_deleteCat"></p>
+                <button type="submit">Delete</button>
+            </div>
         </form>
     </div>
 
