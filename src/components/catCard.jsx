@@ -21,7 +21,7 @@ const CatCard = ({ cat }) => {
                 <h1> {cat.name} <span className='id'> #{cat.id} </span> </h1> 
                 <p> <b>Alter:</b>          <span className='right'> {cat.age}</span></p>
                 <hr/>
-                <p> <b>Spezies:</b>        <span className='right'> {cat.specie}</span></p>
+                <p> <b>Spezies:</b>        <span className='right'> {cat.species}</span></p>
                 <hr/>
                 <p> <b>Vegan:</b>          <span className='right'> {cat.isVegan ? "Ja" : "Nein"}</span></p>
             </div>

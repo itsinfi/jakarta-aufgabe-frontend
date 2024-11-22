@@ -1,32 +1,32 @@
 {
-    "url": "http://localhost:8080/jakarta-aufgabe-backend/rest",
-    "showDummydata" : true,
+    "url": "http://localhost:8080/jakarta-aufgabe-backend",
+    "showDummydata" : false,
     "dummyData": [
         {
             "id": 1,
             "name": "Felix",
-            "specie": "Hauskatze",
+            "species": "Hauskatze",
             "age": 3,
             "isVegan": false
         },
         {
             "id": 2,
             "name": "Luna",
-            "specie": "Hauskatze",
+            "species": "Hauskatze",
             "age": 7,
             "isVegan": false
         },
         {
             "id": 3,
             "name": "Lana",
-            "specie": "Hauskatze",
+            "species": "Hauskatze",
             "age": 8,
             "isVegan": false
         },
         {
             "id": 4,
             "name": "Sebastian",
-            "specie": "Hauskatze",
+            "species": "Hauskatze",
             "age": 6,
             "isVegan": false
         }

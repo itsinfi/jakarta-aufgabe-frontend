@@ -35,7 +35,7 @@ const Api = () => {
     const getAllCats = async () => {
         //return dummy data
         if (apiConfig.showDummydata) return apiConfig.dummyData
-        else return await get('/cats')
+        else return await get('/cats/')
     }
 
 
