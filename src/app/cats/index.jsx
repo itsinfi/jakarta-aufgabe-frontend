@@ -23,9 +23,12 @@ const Cats = () => {
     return (
         <>
             <h2>Hier sind alle Kadsen :3</h2>
+            
             {cats.map((cat) => (
                 <CatCard key={cat.id} cat={cat} />
             ))}
+
+            <br/><br/><br/><h1>+</h1><br/><br/><br/>
         </>
     )
 }
