@@ -34,38 +34,8 @@ const Api = () => {
      */
     const getAllCats = async () => {
         //return dummy data
-        return [
-            {
-                id: 1,
-                name: "Felix",
-                specie: "Hauskatze",
-                age: 3,
-                isVegan: false,
-            },
-            {
-                id: 2,
-                name: "Luna",
-                specie: "Hauskatze",
-                age: 7,
-                isVegan: false,
-            },
-            {
-                id: 3,
-                name: "Lana",
-                specie: "Hauskatze",
-                age: 8,
-                isVegan: false,
-            },
-            {
-                id: 4,
-                name: "Sebastian",
-                specie: "Hauskatze",
-                age: 6,
-                isVegan: false,
-            },
-        ]
-
-        return await get('/cats')
+        if (apiConfig.showDummydata) return apiConfig.dummyData
+        else return await get('/cats')
     }
 
 
